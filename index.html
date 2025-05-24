@@ -6,10 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>HadraPay – Coming Soon</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.7.4/lottie.min.js"></script>
   <style>
     body {
-      background: linear-gradient(135deg, #00bcd4, #ffffff);
+      background: linear-gradient(135deg, #4facfe, #00f2fe);
       background-size: 400% 400%;
       animation: gradientBG 15s ease infinite;
     }
@@ -18,19 +18,13 @@
       50% {background-position: 100% 50%;}
       100% {background-position: 0% 50%;}
     }
-    .icon-bounce {
-      animation: bounce 2s infinite;
-    }
-    @keyframes bounce {
-      0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
-      40% {transform: translateY(-15px);}
-      60% {transform: translateY(-8px);}
-    }
   </style>
 </head>
 <body class="min-h-screen flex items-center justify-center p-4">
   <div class="bg-white max-w-lg w-full p-10 rounded-3xl shadow-2xl text-center">
-    <i class="fas fa-star fa-3x text-yellow-500 icon-bounce mb-4"></i>
+    <!-- Lottie Animation Container -->
+    <div id="lottie-animation" class="w-40 h-40 mx-auto mb-6"></div>
+    
     <h1 class="text-5xl font-extrabold text-blue-700 mb-6">HadraPay is Coming Soon</h1>
     <p class="text-xl text-gray-700 mb-8">
       We're launching a next-gen POS platform for modern retailers and merchants.
@@ -46,5 +40,16 @@
       Have questions? <a href="mailto:info@hadrapay.com" class="text-blue-600 underline hover:text-blue-800">Contact us</a>
     </p>
   </div>
+
+  <!-- Lottie Animation Script -->
+  <script>
+    var animation = lottie.loadAnimation({
+      container: document.getElementById('lottie-animation'),
+      renderer: 'svg',
+      loop: true,
+      autoplay: true,
+      path: 'https://assets9.lottiefiles.com/packages/lf20_jcikwtux.json' // Example Lottie URL
+    });
+  </script>
 </body>
 </html>
